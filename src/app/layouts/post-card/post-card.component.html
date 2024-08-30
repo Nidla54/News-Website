@@ -1,0 +1,40 @@
+<div [routerLink]="['/post', postLatestData.id]"
+  class="w-80 h-[420px]  grid grid-rows-2 bg-white font-sans overflow-hidden hover:scale-105 border-blue-300 border-2">
+  <div class=""><img src="{{postLatestData.postImgPath}}" style='width:600px !important; height:210px !important;'
+      alt="Picture of a cat"></div>
+
+
+  <div>
+    <!--BELLOW IMG-->
+
+    <div>
+      <!--LIST -->
+      <ul class="flex flex-row gap-2 justify-start ml-3 font-mono text-sm mt-2 pr-2">
+        <li>{{postLatestData.category.category}}</li>
+        <li>FEATURED</li>
+        <li>VIEWS - {{postLatestData.views}}</li>
+      </ul>
+    </div>
+
+
+    <div class="text-xl text-blue-900 font-semibold  ml-3 mt-1 line-clamp-2 pr-2">
+      <!-- TITLE -->
+      <h1>{{postLatestData.title}}</h1>
+    </div>
+
+    <div class=" ml-3 text-sm line-clamp-4 break-all mt-1 pr-2">
+      <!--MAIN TEXT-->
+      {{postLatestData.excerpt}}
+
+    </div>
+
+    <div class=" ml-3 mt-3">
+      <!--LAST UPDATED-->
+      LAST UPDATED - {{postLatestData.creatdAt.toMillis() | date}}
+    </div>
+
+
+  </div>
+
+
+</div>

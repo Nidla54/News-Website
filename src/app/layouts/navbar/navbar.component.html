@@ -1,0 +1,7 @@
+<div class="h-14 w-screen text-xl font-medium font-mono items-center flex justify-center  text-blue-900 mt-4">
+  <ul class=" flex flex-row  gap-9  ">
+    <li *ngFor="let data of userData" class="hover:scale-110"><a href=""
+        [routerLink]="['/category', data.id]">{{data.category}} </a></li>
+
+  </ul>
+</div>

@@ -1,0 +1,17 @@
+<div class="">
+  <div class="w-screen h-60 pl-10 bg-blue-200 flex justify-center items-start flex-col">
+    <!--GENERAL-->
+    <h1 class="text-5xl font-mono font-bold">GENERAL KNOWLEDGE</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+  </div>
+
+  <div class="grid mt-7 grid-rows-2 items-center justify-center">
+
+    <!--POSTS-->
+    <div class="grid grid-cols-3 gap-10 mt-7" *ngFor="let postCategory of postsArray">
+
+      <app-post-card-single [singlePost]="postCategory"></app-post-card-single>
+
+    </div>
+
+  </div>

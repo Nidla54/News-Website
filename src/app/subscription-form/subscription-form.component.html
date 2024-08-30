@@ -1,0 +1,38 @@
+<div class=" h-80 flex items-center justify-center  mt-6">
+  <div class="bg-blue-200 h-80 w-4/5 flex  flex-col items-center">
+
+    <div>
+      <h1 class="text-4xl  flex  mt-8">SUBSCRIPTION FORM </h1>
+
+
+
+    </div>
+
+    <div>
+
+
+      <p class="mr-1 mt-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, eveniet! Ipsam at sit ullam
+        Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Quas, fugiat?
+        .</p>
+    </div>
+
+
+
+
+
+    <form class="mt-12 gap-7 flex" #subForm=ngForm (ngSubmit)="onSubmit(subForm.value)">
+      <!-- INPUTS AND SUB BUTTON -->
+
+      <input name="name" ngModel class="p-3 h-12 w-80 rounded" placeholder="Name" type="text" required #Name="ngModel">
+      <input name="email" ngModel class="p-3 w-80 h-12 rounded" placeholder="Email" type="email" #Email="ngModel"
+        required>
+      <button class="bg-blue-900 rounded h-12 w-28 text-xl hover:scale-105 text-white">Subscribe</button>
+
+    </form>
+  </div>
+
+
+
+
+</div>

@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "default": "news-database-91ab8"
+  },
+  "targets": {
+    "news-database-91ab8": {
+      "hosting": {
+        "newsWebsite": [
+          "news-website123.web.app"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

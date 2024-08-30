@@ -1,0 +1,50 @@
+<div>
+  <div class="w-screen flex justify-center ">
+    <!--IMAGE-->
+    <img class="h-[600px] w-[1250px] object-fill" src="{{postData.postImgPath}}">
+
+  </div>
+
+
+  <div class="grid grid-cols-4 w-[1300px] h-auto mt-7">
+    <!--LOWER PART BODY-->
+
+    <div class="col-span-3 pl-[200px] justify-center">
+
+      <ul class="flex gap-4">
+        <li>{{postData.category.category}}</li>
+        <li>FEATURED</li>
+        <li>VIEWS - {{postData.views}}</li>
+        <li>LAST UPDATED - {{postData.creatdAt.toMillis() | date}}</li>
+
+      </ul>
+
+
+      <h1 class=" flex justify-center mt-7">{{postData.title}}</h1>
+
+      <div [innerHTML]="postData.content"></div>
+
+
+
+      <app-comment-form></app-comment-form>
+      <app-comment-list></app-comment-list>
+    </div>
+
+
+    <div class="flex flex-col pl-20 justify-start gap-4">
+      <!--POSTS-->
+
+
+      <app-post-card-featured *ngFor="let featuredPost of postFeaturedData" [postData]='featuredPost'>
+      </app-post-card-featured>
+
+
+
+
+    </div>
+
+
+  </div>
+
+
+</div>>
